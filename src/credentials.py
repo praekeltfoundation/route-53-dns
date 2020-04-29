@@ -1,6 +1,6 @@
 
 from os.path import expanduser
-import os, route53, os
+import os, route53, os, sys
 
 def get_credentials():
   #Check if aws credentials exist on the user home directory 
