@@ -9,6 +9,10 @@ jobs:
         python-version: [2.7, 3.5, 3.6, 3.7]
     steps:
     - uses: actions/checkout@v2
+    - name: Get pip cache dir
+      id: pip-cache
+      run: |
+        echo "::set-output name=dir::$(pip cache dir)"
     - name: Cache pip
       uses: actions/cache@v2
       with:
